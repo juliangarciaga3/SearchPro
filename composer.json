@@ -1,6 +1,7 @@
 {
-    "name": "symfony/searchpro",
+    "name": "bitsystem/searchpro",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Julian Garcia Garcia",
