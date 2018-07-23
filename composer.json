@@ -1,0 +1,11 @@
+{
+    "name": "bitsystem/searchpro",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Julian Garcia Garcia",
+            "email": "juliarriate@hotmail.es"
+        }
+    ],
+    "require": {}
+}
