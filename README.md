@@ -138,7 +138,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Autor
 
-* **Julian Garcia Garcia** - *Creador* - [PurpleBooth](https://github.com/juliangarciaga3)
+* **Julian Garcia Garcia** - *Creador* - [Juliangarciaga3](https://github.com/juliangarciaga3)
 
 Consulte también la lista de [colaboradores](https://github.com/juliangarciaga3/SearchPro/graphs/contributors) que participaron en este proyect.
 
