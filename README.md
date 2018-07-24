@@ -148,5 +148,5 @@ Este proyecto está licenciado bajo la Licencia MIT - ver el [LICENSE.md](LICENS
 
 ## Inspirado
 
-* Datatables [getbootstrap.com](https://datatables.net/)
+* Datatables [datatables.net](https://datatables.net/)
 * Bootstrap 3.3.7 [getbootstrap.com](https://getbootstrap.com/)
