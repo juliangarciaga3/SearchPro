@@ -1,24 +1,21 @@
-# Project Title
+# Search Pro
 
-One Paragraph of project description goes here
+Search pro es una libreria pensada para mostrar las tablas de una base de datos sin tener que tocar codigo. Ademas puedes filtrar las tablas por las columnas. Incluye un sistema de paginacion que busca los resultados de la tabla por Ajax segun los filtros seleccionados.
 
-## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## Como usarlo
+
+Primero incluimos la libreria en el controlador.
+```php
+use Symfony\SearchPro;
+```
 
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
-```
-Give examples
-```
+
 ![tabla](https://user-images.githubusercontent.com/24224731/43127144-08474f72-8f2f-11e8-8feb-4f778e01f2b0.JPG)
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
 
 ```
 Give the example
