@@ -1,6 +1,6 @@
 {
     "name": "symfony/searchpro",
-    "description": "This is a demo package to use the API of Github.",
+    "description": "Este es una libreria que te permite listar las tablas de una base de datos. Pueden mostrar tablas relacionadas y filtrarlas entre multiples valores. Pagina los resultados y puedes asignar el numero de resultados por pagina",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -9,7 +9,7 @@
             "email": "juliarriate@hotmail.es"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
         "php": ">=5.6"
