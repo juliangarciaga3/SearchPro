@@ -2,12 +2,18 @@
     "name": "symfony/searchpro",
     "description": "Este es una libreria que te permite listar las tablas de una base de datos. Pueden mostrar tablas relacionadas y filtrarlas entre multiples valores. Pagina los resultados y puedes asignar el numero de resultados por pagina",
     "type": "library",
-    "version": "3.1.7",
+    "version": "1.0.0",
     "license": "MIT",
     "authors": [
         {
             "name": "Julian Garcia Garcia",
             "email": "juliarriate@hotmail.es"
         }
-    ]
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "ext-curl": "*",
+        "ext-json": "*"
+    }
 }
