@@ -136,18 +136,17 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
-## Authors
+## Autor
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Julian Garcia Garcia** - *Creador* - [PurpleBooth](https://github.com/juliangarciaga3)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+Consulte también la lista de [colaboradores](https://github.com/juliangarciaga3/SearchPro/graphs/contributors) que participaron en este proyect.
 
-## License
+## Licencia
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Este proyecto está licenciado bajo la Licencia MIT - ver el [LICENSE.md](LICENSE.md) archivo para detalles
 
-## Acknowledgments
+## Inspirado
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Datatables [getbootstrap.com](https://datatables.net/)
+* Bootstrap 3.3.7 [getbootstrap.com](https://getbootstrap.com/)
