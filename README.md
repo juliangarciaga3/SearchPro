@@ -13,7 +13,7 @@ What things you need to install the software and how to install them
 ```
 Give examples
 ```
-
+![tabla](https://user-images.githubusercontent.com/24224731/43127144-08474f72-8f2f-11e8-8feb-4f778e01f2b0.JPG)
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
