@@ -81,7 +81,7 @@ $resultSearch = $search->setTable('BURGERS')
 ```
 ### Resultado
 
-What things you need to install the software and how to install them
+Vista de como se ve la tabla segun los parametros indicados
 
 
 ![tabla](https://user-images.githubusercontent.com/24224731/43127144-08474f72-8f2f-11e8-8feb-4f778e01f2b0.JPG)
