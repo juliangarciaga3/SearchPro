@@ -10,10 +10,5 @@
             "email": "juliarriate@hotmail.es"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">=5.4.0",
-        "ext-curl": "*",
-        "ext-json": "*"
-    }
+    "minimum-stability": "stable"
 }
