@@ -9,11 +9,5 @@
             "name": "Julian Garcia Garcia",
             "email": "juliarriate@hotmail.es"
         }
-    ],
-    "minimum-stability": "stable",
-    "autoload": {
-        "psr-4": {
-            "Symfony\\SearchPro\\": "src/"
-        }
-    }
+    ]
 }
