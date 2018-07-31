@@ -6,8 +6,23 @@ Search pro es una libreria pensada para mostrar las tablas de una base de datos 
 1. [¿Como funciona?](#id1)
 2. [Twig](#id2)
 3. [Repositorios Remotos](#id3)
-4. [Etiquetado](#id4)
+4. [Parametros](#params)
 5. [Estructura de Tablas](#id5)
+
+
+## Parametros
+<a name="params"></a> 
+### Paginación
+Si necesitamos ocultar la paginacion de la tabla solo tenemos que añadir la opcion paging. Por defecto el valor de paging es ```TRUE``` 
+```
+paging: false
+```
+### Info
+El numero de resultados totales de columnas de la tabla se muestra debajo de la paginacion. Por defecto el valor de info es ```TRUE``` 
+Si necesitamos ocultar la informacion solo tenemos que añadir la opcion info.
+```
+info: false
+```
 
 
 ## ¿Como funciona?
@@ -98,50 +113,26 @@ Estructura basica html
 
 ```
 
-
 ```javascript
-<script>
-    $(".search-pro").search({
-        textSend: $('#find'),
-        buttonSend: $('#find-ajax'),
-        colums: ['ID','Restaurante','Dirección','Valoraciones'],
-        tableRow: function(data){
-            debug: data;
-            var row = "";
-            $.each(data.result, function(k, v){
-                var media = 5;
-                var stringStar ="";
-                for(var star=1;star<=5;star++){
-                    if(star <= (media/2)){
-                        stringStar += "<i class='mdi mdi-star'></i>";
-                    }else if((star - 1) * 2 < media){
-                        stringStar += "<i class='mdi mdi-star-half'></i>";
-                    }else{
-                        stringStar += "<i class='mdi mdi-star-outline'></i>";
-                    }
-                };
-                row += "<tr data-href='"+v.id+"'>"+
-                                            "<th>"+v.id+"</th>"+
-                                            "<th>"+
-                                                "<img class='align-self-start mr-3' src='" + v.IMAGE + "' height='64'>"+
-                                                "<a>"+v.NAME+"</a>"+
-                                            "</th>"+
-                                            "<th>"+
-                                                v.ADDRESS+
-                                                "<br>"+
-                                                v.POPULATION+"/"+v.PROVINCE+
-                                            "</th>"+
-                                            "<th>"+
-                                                stringStar+
-                                                "<strong>6,7</strong>"+
-                                                "<p>12.504</p>"+
-                                            "</th>"+
-                                        "</tr>";
-            });
-            return row;
-        }
-    });
-</script>
+$("#search-pro").search({
+    textSend: $('#find'),
+    buttonSend: $('#find-ajax'),
+    paging: false,
+    info: false,
+    colums: ['Id','Nombre'],
+    tableRow: function(data){
+        var row = "";
+        $.each(data.result, function(k, v){
+            row += "<tr data-href='"+v.id+"'>\
+                        <th>"+v.id+"</th>\
+                            <th>\
+                            <a>"+v.nombre+"</a>\
+                        </th>\
+                    </tr>";
+        });
+        return row;
+    }
+});
 ```
 ```npm install```
 ## Php
