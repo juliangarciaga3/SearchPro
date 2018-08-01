@@ -9,18 +9,14 @@ Search pro es una libreria pensada para mostrar las tablas de una base de datos 
 * [Parametros](#params)
   * [Paginacion](#paging)
   * [Info](#info)
-  * [setTable](#table)([array](http://php.net/manual/es/language.types.array.php))
+  * [setTable](#table)([string](http://php.net/manual/es/language.types.string.php))
   * [addFilter](#add-filter)([array](http://php.net/manual/es/language.types.array.php))
   * [addColum](#add-colum)([array](http://php.net/manual/es/language.types.array.php))
   * [addColumForeignKey](#colum-foreign-key)([array](http://php.net/manual/es/language.types.array.php))
   * [selectRow](#select-row)([array](http://php.net/manual/es/language.types.array.php))
   * [search](#search)([string, string](http://php.net/manual/es/language.types.string.php))
   * [getResult()](#result)
-  
-[setTable](#table)([array](http://php.net/manual/es/language.types.array.php))
-3. [Repositorios Remotos](#id3)
-4. [Parametros](#params)
-5. [Estructura de Tablas](#id5)
+* [Estructura de Tablas](#params)
 
 <a name="add-colum"></a>
 <a name="add-filter"></a>
@@ -86,19 +82,38 @@ Si necesitamos ocultar la paginacion de la tabla solo tenemos que añadir la opc
 ```
 paging: false
 ```
-### Info
+### Numero de resultados
 <a name="info"></a> 
 El numero de resultados totales de columnas de la tabla se muestra debajo de la paginacion. Por defecto el valor de info es ```TRUE``` 
 Si necesitamos ocultar la informacion solo tenemos que añadir la opcion info.
 ```
 info: false
 ```
+
+### addColum
+<a name="add-colum"></a> 
 ```php
 ->addColum([
-            'id'=>'id',
-            'NAME'=>'NAME',
-            'ADDRESS'=>'ADDRESS'
+            'nombre variable' => 'Nombre columna Tabla'
 ])
+```
+
+<a name="table"></a> 
+Metodo encargado de obtener el nombre de la tabla principal para poder hacer las consultas. La tabla principal se relaciona con otras tablas con los metodos [addColumForeignKey()](#colum-foreign-key) , [addColumForeignKey()](#colum-foreign-key)
+```php
+->setTable('Nombre tabla')
+```
+
+<a name="colum-foreign-key"></a>
+```php
+->addColumForeignKey([
+          'POPULATION' => [
+                          'type' => 'select',
+                          'table' => 'MUNICIPALITY',
+                          'columReference' => 'MUNICIPALITY',
+                          'colum' => 'POPULATION'
+                      ]
+     ])
 ```
 Para implementarlo necesitamos insertar en nuestro controlador y en la vista twig algunos archivos necesarios.
 
