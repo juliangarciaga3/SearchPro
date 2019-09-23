@@ -1,3 +1,48 @@
+# Image
+Libreria adaptada para symfony **3.x**, **4.x**
+Recorta imagenes que se obtienen desde los ficheros temporales(/tmp) del servidor.En esta carpeta se suele guardar los datos pasados por formularios, etc. Recorta las miniaturas de la imagen centrada segun los parametros que se le pase y retorna un array con la ruta donde se guardaron y genera minuaturas. Estas imagenes son guardadas en una carpeta alojada en "/web" o "/public".
+
+## Índice
+* [¿Como funciona?](#how-work-image)
+
+## ¿Como funciona?
+<a name="how-work-image"></a> 
+ - Primero: Obtienes la ruta donde se encuentra la imagen temporal.
+ - Segundo: Instancia la clase **Imagen()**
+ - Tercero: Inserta el nombre de la imagen con el metodo setName()
+ - Cuardo: Inserta la imagen temporal, el nombre de la carpeta donde se guarda y el callBack donde llamar las funciones de Thumbnail
+ - Quinto: **save()**  retorna un array con los datos meta de la imagen guardada.
+ 
+Llama la libreria
+```php 
+use Bitsystem\Backend\Image;
+```
+ 
+```php
+//Obtiene la imagen pasada por un formulario
+$imageBinary = $request->files->get('image', FALSE);
+
+//Instancia la clase
+$image = new Image();
+$image->setName($request->request->get('name', NULL));
+$image->insertImage($imageBinary, 'course',function($e){
+    $e->thumbnail(40,40);
+    $e->thumbnail(364,205);
+    $e->thumbnail(1080,720);
+});
+
+//Retorna un array
+$imageSave = $image->save();
+
+//Recorre el array para obtener el path de la imagen
+foreach ($imageSave['thumbnails'] as $value){
+    $value['route'];
+    $value['width'];
+    $value['height'];
+}
+```
+
+
 # Search Pro
 
 Search pro es una libreria pensada para mostrar las tablas de una base de datos nombrando la tabla y las columnas que necesitamos visualizar. Ademas puedes filtrar las tablas por las columnas. Incluye un sistema de paginacion que busca los resultados de la tabla por Ajax segun los filtros seleccionados.
