@@ -5,7 +5,7 @@ use Bitsystem\Backend\SearchGloom
 
 Un ejemplo de uso
 ```php
-//Crea el objeto
+//Instancia el objeto
 $search = new SearchGloom();
 
 //Pagina a mostrar
@@ -47,4 +47,13 @@ $search->selectRow([	1 => 1,
                         40 => 40,
                         'Todo' => 'all'
                     ]);
+                    
+if($request->isXmlHttpRequest()){
+    return $search->getResultJson();
+}else{
+    return [
+        'listBurger' => $search->getResult()
+    ];
+}        
+                    
 ```
