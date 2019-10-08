@@ -5,6 +5,9 @@ Recorta imagenes que se obtienen desde los ficheros temporales(/tmp) del servido
 ## Índice
 * [¿Como funciona?](#how-work-image)
 
+[SearchGloom](/src/searchGloom.md)
+
+
 ## ¿Como funciona?
 <a name="how-work-image"></a> 
  - Primero: Obtienes la ruta donde se encuentra la imagen temporal.
