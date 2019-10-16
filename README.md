@@ -182,39 +182,7 @@ Estructura basica html
                 </div>
             </div>
             <div class="row">
-                {% if rowList|length %}
-                    <div class="col-sm-4 col-md-2">
-                        <div class="form-group">
-                            <label class="col-sm-12 control-label col-md-12">Resultados: </label>
-                            <div class="col-sm-8 col-md-12">
-                                <select class="form-control" name="row-result">
-                                {% for key,selector in rowList if rowList %}
-                                    {% if selector is iterable and selector['active'] %}
-                                        {% set selector = selector[0] %}
-                                        {% set check = 'selected' %}
-                                    {% else %}
-                                        {% set selector = selector %}
-                                        {% set check = '' %}
-                                    {% endif %}
-                                    <option value="{{selector}}" {{check}}>{{key}}</option>
-                                {% endfor %}                                
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                {% endif %}
-                {% for key,selector in filter %}
-                    {% if selector is defined %}
-                        <div class="col-xl-2 col-sm-4 filter">
-                            <div class="form-group">
-                                <div class="form-group row">
-                                    <label class="control-label">{{selector.label}}</label>
-                                    <select class="select2 {{key}} form-control select2-multiple" name="{{key}}"></select>
-                                </div>
-                            </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
+               
             </div>
 
             <div class="table-rep-plugin">
