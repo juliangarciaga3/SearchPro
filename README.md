@@ -85,12 +85,12 @@ composer require bitsystem/searchpro
 <a name="twig"></a> 
 Necesitamos agregar primero el select2.js necesario para poder visualizar los filtros de la tabla. Despues tableList.js al final.
 ```twig
-{% block javascripts %}
+{% blocks javascripts %}
     //Dependencias
     <script type="text/javascript" src="{{ asset('assets/select2/dist/js/select2.min.js') }}"></script>
     //Plugin para generar la tabla
     <script src="{{asset('js/tableList.js')}}"></script>
-{% endblock %}
+{% endblocks %}
 ```
 ## Php
 Primero incluimos la libreria en el controlador.
